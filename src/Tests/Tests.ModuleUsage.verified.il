@@ -10,7 +10,6 @@
   .custom instance void [System.Runtime]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [System.Runtime]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ([System.Runtime]System.Diagnostics.DebuggableAttribute/DebuggingModes(263))
   .custom instance void [System.Runtime]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = (".NETCoreApp,Version=v8.0", property FrameworkDisplayName = ".NET 8.0")
   .custom instance void [System.Runtime]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ("AssemblyToProcess")
-  .custom instance void [System.Runtime]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ("Debug")
   .custom instance void [System.Runtime]System.Reflection.AssemblyCopyrightAttribute::.ctor(string) = ("Copyright")
   .custom instance void [System.Runtime]System.Reflection.AssemblyDescriptionAttribute::.ctor(string) = ("Sample assembly")
   .custom instance void [System.Runtime]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ("1.0.0")

@@ -6,6 +6,10 @@
     <IsPackable>false</IsPackable>
     <!-- fixed so snapshots do not change when the package version changes -->
     <Version>1.0.0</Version>
+    <!-- fixed so snapshots do not change with configuration, a -p:Version override, or the git remote -->
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateRepositoryUrlAttribute>false</GenerateRepositoryUrlAttribute>
     <Description>Sample assembly</Description>
     <Copyright>Copyright</Copyright>
   </PropertyGroup>
