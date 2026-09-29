@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+  Same source as Verify.Cecil, compiled against the Mono.Cecil bundled in FodyHelpers.
+  That Mono.Cecil is signed with a different key to the Mono.Cecil package, so the two are not interchangeable.
+  -->
+  <PropertyGroup>
+    <TargetFrameworks>net48;net8.0</TargetFrameworks>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow snapshot testing and structural validation of the Mono.Cecil bundled with FodyHelpers (https://github.com/Fody/Fody). An alternative to PEVerify for Fody weaver tests.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Verify.Cecil\**\*.cs" Exclude="..\Verify.Cecil\bin\**;..\Verify.Cecil\obj\**" />
+    <PackageReference Include="FodyHelpers" />
+    <PackageReference Include="Verify" />
+    <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
+    <PackageReference Include="Sbom" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

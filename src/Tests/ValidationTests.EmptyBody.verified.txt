@@ -1,0 +1,3 @@
+﻿[
+  System.Void Target::Invalid(): method body has no instructions
+]

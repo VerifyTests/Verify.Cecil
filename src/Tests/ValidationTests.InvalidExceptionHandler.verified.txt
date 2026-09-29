@@ -1,0 +1,4 @@
+﻿[
+  System.Void Target::Invalid(): exception handler 0 (Catch): HandlerStart (nop) is not in the method body,
+  System.Void Target::Invalid(): exception handler 0 (Catch): catch handler has no CatchType
+]

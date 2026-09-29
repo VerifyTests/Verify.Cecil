@@ -1,0 +1,1 @@
+Extends [Verify](https://github.com/VerifyTests/Verify) to allow snapshot testing and structural validation of [Mono.Cecil](https://github.com/jbevain/cecil) modules, types and members. An alternative to PEVerify.

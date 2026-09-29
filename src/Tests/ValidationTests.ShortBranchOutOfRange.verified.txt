@@ -1,0 +1,3 @@
+﻿[
+  System.Void Target::Invalid(): IL_0000: br.s: short branch to IL_00ca is 200 bytes, outside the range of a short branch. Use the long form, or call OptimizeMacros
+]

@@ -1,0 +1,4 @@
+﻿[
+  System.Void Target::Invalid(): IL_0004: ret: stack must be empty after ret, but has 1 left,
+  System.Void Target::Invalid(): IL_0004: ret: stack depth is 1 on one path and 0 on another
+]

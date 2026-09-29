@@ -1,0 +1,1 @@
+﻿.field private string property

@@ -1,0 +1,13 @@
+global using System.Globalization;
+global using System.Text;
+global using Mono.Cecil;
+global using Mono.Cecil.Cil;
+global using Mono.Collections.Generic;
+global using VerifyTests.Cecil;
+global using MethodBody = Mono.Cecil.Cil.MethodBody;
+global using MethodImplAttributes = Mono.Cecil.MethodImplAttributes;
+global using ICustomAttributeProvider = Mono.Cecil.ICustomAttributeProvider;
+global using MethodAttributes = Mono.Cecil.MethodAttributes;
+global using FieldAttributes = Mono.Cecil.FieldAttributes;
+global using TypeAttributes = Mono.Cecil.TypeAttributes;
+global using CallSite = Mono.Cecil.CallSite;
