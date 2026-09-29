@@ -315,6 +315,7 @@ static class Names
             case IFormattable formattable:
                 return formattable.ToString(null, CultureInfo.InvariantCulture);
             default:
+                // ReSharper disable once NullCoalescingConditionIsAlwaysNotNullAccordingToAPIContract
                 return value.ToString() ?? "";
         }
     }

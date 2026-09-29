@@ -100,12 +100,15 @@ class IlWriter
     static bool IsEmptyModuleType(TypeDefinition type) =>
         type.Name == "<Module>" &&
         type.Namespace.Length == 0 &&
-        !type.HasMethods &&
-        !type.HasFields &&
-        !type.HasProperties &&
-        !type.HasEvents &&
-        !type.HasNestedTypes &&
-        !type.HasCustomAttributes;
+        type is
+        {
+            HasMethods: false,
+            HasFields: false,
+            HasProperties: false,
+            HasEvents: false,
+            HasNestedTypes: false,
+            HasCustomAttributes: false
+        };
 
     public void Type(TypeDefinition type)
     {

@@ -65,33 +65,37 @@ static class Attributes
 
     static string Argument(CustomAttributeArgument argument)
     {
-        var value = argument.Value;
-        switch (value)
+        while (true)
         {
-            case null:
-                return "null";
-            case CustomAttributeArgument boxed:
-                return Argument(boxed);
-            case CustomAttributeArgument[] items:
-                return $"[{string.Join(", ", items.Select(Argument))}]";
-            case TypeReference type:
-                return $"typeof({Names.Token(type)})";
-            case string text:
-                return Names.Quote(text);
-            case bool boolean:
-                return boolean.ToString().ToLowerInvariant();
-            case char ch:
-                return $"char(0x{(int) ch:X4})";
-        }
+            var value = argument.Value;
+            switch (value)
+            {
+                case null:
+                    return "null";
+                case CustomAttributeArgument boxed:
+                    argument = boxed;
+                    continue;
+                case CustomAttributeArgument[] items:
+                    return $"[{string.Join(", ", items.Select(Argument))}]";
+                case TypeReference type:
+                    return $"typeof({Names.Token(type)})";
+                case string text:
+                    return Names.Quote(text);
+                case bool boolean:
+                    return boolean.ToString().ToLowerInvariant();
+                case char ch:
+                    return $"char(0x{(int) ch:X4})";
+            }
 
-        var number = Names.Number(value);
-        var argumentType = argument.Type;
-        if (argumentType.IsPrimitive)
-        {
-            return number;
-        }
+            var number = Names.Number(value);
+            var argumentType = argument.Type;
+            if (argumentType.IsPrimitive)
+            {
+                return number;
+            }
 
-        // enums: show the enum type with the underlying value
-        return $"{Names.Token(argumentType)}({number})";
+            // enums: show the enum type with the underlying value
+            return $"{Names.Token(argumentType)}({number})";
+        }
     }
 }

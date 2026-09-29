@@ -492,8 +492,11 @@ class MethodValidator(MethodDefinition method, List<string> problems)
                 valid &= CheckBoundary(name, "FilterStart", handler.FilterStart, false);
             }
 
-            if (handler.HandlerType == ExceptionHandlerType.Catch &&
-                handler.CatchType == null)
+            if (handler is
+                {
+                    HandlerType: ExceptionHandlerType.Catch,
+                    CatchType: null
+                })
             {
                 Add($"{name}: catch handler has no CatchType");
             }
@@ -671,8 +674,7 @@ class MethodValidator(MethodDefinition method, List<string> problems)
                         case Instruction[] targets:
                             foreach (var switchTarget in targets)
                             {
-                                if (switchTarget != null &&
-                                    indexes.ContainsKey(switchTarget))
+                                if (indexes.ContainsKey(switchTarget))
                                 {
                                     pending.Push((switchTarget, depth));
                                 }
@@ -815,7 +817,11 @@ class MethodValidator(MethodDefinition method, List<string> problems)
     static int SignaturePop(IMethodSignature signature)
     {
         var pop = signature.Parameters.Count;
-        if (signature.HasThis && !signature.ExplicitThis)
+        if (signature is
+            {
+                HasThis: true,
+                ExplicitThis: false
+            })
         {
             pop++;
         }

@@ -140,7 +140,7 @@ public class ValidationTests
     public Task InvalidExceptionHandler() =>
         VerifyProblems(
             _ => _.TypeSystem.Void,
-            (il, module) =>
+            (il, _) =>
             {
                 var ret = il.Create(OpCodes.Ret);
                 il.Emit(OpCodes.Nop);

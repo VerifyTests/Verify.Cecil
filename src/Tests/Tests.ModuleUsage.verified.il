@@ -10,14 +10,13 @@
   .custom instance void [System.Runtime]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [System.Runtime]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ([System.Runtime]System.Diagnostics.DebuggableAttribute/DebuggingModes(263))
   .custom instance void [System.Runtime]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = (".NETCoreApp,Version=v8.0", property FrameworkDisplayName = ".NET 8.0")
   .custom instance void [System.Runtime]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ("AssemblyToProcess")
-  .custom instance void [System.Runtime]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ("Release")
+  .custom instance void [System.Runtime]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ("Debug")
   .custom instance void [System.Runtime]System.Reflection.AssemblyCopyrightAttribute::.ctor(string) = ("Copyright")
   .custom instance void [System.Runtime]System.Reflection.AssemblyDescriptionAttribute::.ctor(string) = ("Sample assembly")
   .custom instance void [System.Runtime]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ("1.0.0")
   .custom instance void [System.Runtime]System.Reflection.AssemblyInformationalVersionAttribute::.ctor(string) = ("1.0.0")
   .custom instance void [System.Runtime]System.Reflection.AssemblyProductAttribute::.ctor(string) = ("AssemblyToProcess")
   .custom instance void [System.Runtime]System.Reflection.AssemblyTitleAttribute::.ctor(string) = ("AssemblyToProcess")
-  .custom instance void [System.Runtime]System.Reflection.AssemblyMetadataAttribute::.ctor(string, string) = ("RepositoryUrl", "https://github.com/VerifyTests/Verify.Cecil.git")
   .publickeytoken = (C7 A3 45 12 EC D6 90 90)
   .ver 1:0:0:0
 }
