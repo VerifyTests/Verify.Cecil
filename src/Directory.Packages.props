@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="FodyHelpers" Version="6.9.3" />
-    <PackageVersion Include="MarkdownSnippets.MsBuild" Version="28.5.0" />
+    <PackageVersion Include="MarkdownSnippets.MsBuild" Version="28.5.1" />
     <PackageVersion Include="Mono.Cecil" Version="0.11.6" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.184" />
     <PackageVersion Include="Sbom" Version="0.3.1" />
